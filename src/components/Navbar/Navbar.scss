@@ -1,0 +1,32 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(3, 16, 62, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  img {
+    width: 70px;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+}

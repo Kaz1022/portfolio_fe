@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: "Dosis", sans-serif;
 
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
@@ -10,6 +10,8 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+
+  --navy-color: #03103E;
 }
 
 * {
