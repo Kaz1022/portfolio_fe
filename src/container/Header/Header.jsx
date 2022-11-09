@@ -47,7 +47,8 @@ const Header = () => {
     <section className="app__header app__flex" id="home">
       <div className="header-left">
         <h1><span className="wrap">{text}</span>{`, I'm Kaz!`}</h1>
-        <h1>A Mindful Web Developer </h1>
+        <h1>A Mindful Web Developer...</h1>
+        <p>...who loves being creative, working with people, trying new things and aquiring new skills. </p>
 
         {/* blur divs */}
         <div className="blur" style={{background: 'var(--lightGray-color)'}}>
