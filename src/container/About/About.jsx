@@ -25,6 +25,7 @@ const About = () => {
                 "css",
                 "javascript",
                 "react",
+                "sanity",
                 "sass",
                 "bootstrap",
                 "git",
