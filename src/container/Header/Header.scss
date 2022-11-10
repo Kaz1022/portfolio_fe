@@ -63,6 +63,11 @@
     @media screen and (max-width: 900px) {
       margin-top: 1.5rem;
     }
+
+    @media screen and (max-width: 450px) {
+      font-size: 1rem;
+      padding: 0 3rem;
+    }
   }
 
   .blur {
@@ -79,6 +84,10 @@
       margin-left: -10rem;
       transform: scale(0.5);
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    justify-content: center;
   }
 }
 
@@ -101,7 +110,7 @@
   }
 
   @media screen and (max-width: 450px) {
-    transform: scale(0.8);
+    transform: scale(0.75);
   }
 
 }
