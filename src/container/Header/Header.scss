@@ -25,7 +25,6 @@
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
-    height: auto;
   }
 
   @media screen and (max-width: 450px) {
@@ -40,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   color: var(--white-color);
+  z-index: 1;
 
   h1 {
     margin-top: 1rem;
@@ -82,23 +82,26 @@
   }
 }
 
-.blur {
-  position: absolute;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  z-index: 0;
-  filter: blur(100px);
-}
-
 .header-right {
   display: flex;
   position: relative;
   flex:1;
   flex-direction: column;
+  z-index: 0;
 
-  img {
+  img:nth-child(1) {
     position: absolute;
     width: 400px;
   }
+
+  img:nth-child(2) {
+    position: absolute;
+    width: 400px;
+    margin-top: -3rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    transform: scale(0.8);
+  }
+
 }

@@ -43,6 +43,14 @@ const Header = () => {
     } 
   }
 
+  const bounceTransision = {
+    y: {
+      duration: 1.5,
+      yoyo: Infinity,
+      ease: "easeOut"
+    }
+  }
+
   return (
     <section className="app__header app__flex" id="home">
       <div className="header-left">
@@ -54,9 +62,18 @@ const Header = () => {
         <div className="blur" style={{background: 'var(--white-color)'}}>
         </div>
       </div>
+
       <div className="header-right app__flex">
           <img src={images.kazyoga} alt="codeyogi" />
-          <img src={images.heart} alt="heart" />
+          <motion.img 
+            transition={bounceTransision}
+            animate={{
+              y: ["5%", "-5%"]
+            }}
+            src={images.heart} 
+            alt="heart" 
+            className="header-heart"
+          />          
       </div>
 
     </section>
