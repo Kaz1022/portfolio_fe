@@ -15,7 +15,7 @@
   height: 90vh;
   flex-direction: row;
 
-  background-color: var(--navy-color);
+  background-color: var(--beige-color);
 
   padding: 6rem 2rem 0rem;
 
@@ -25,6 +25,7 @@
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
+    height: auto;
   }
 
   @media screen and (max-width: 450px) {
@@ -70,10 +71,11 @@
     height: 7rem;
     border-radius: 50%;
     z-index: 0;
-    filter: blur(100px);
+    filter: blur(60px);
+    margin-left: -20rem;
 
     @media screen and (max-width: 900px) {
-      margin-top: 5rem;
+      margin-top: 4rem;
       margin-left: -10rem;
       transform: scale(0.5);
     }
@@ -91,6 +93,12 @@
 
 .header-right {
   display: flex;
-  flex: 1;
-  justify-content: center;
+  position: relative;
+  flex:1;
+  flex-direction: column;
+
+  img {
+    position: absolute;
+    width: 400px;
+  }
 }

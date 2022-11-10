@@ -1,9 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
+import { images } from '../../constants';
 
 import "./Header.scss";
-import { useEffect } from "react";
 
 const Header = () => {
 
@@ -51,11 +51,12 @@ const Header = () => {
         <p>...who loves being creative, working with people, trying new things and aquiring new skills. </p>
 
         {/* blur divs */}
-        <div className="blur" style={{background: 'var(--lightGray-color)'}}>
+        <div className="blur" style={{background: 'var(--white-color)'}}>
         </div>
       </div>
-      <div className="header-right">
-        <h1>header right</h1>
+      <div className="header-right app__flex">
+          <img src={images.kazyoga} alt="codeyogi" />
+          <img src={images.heart} alt="heart" />
       </div>
 
     </section>
