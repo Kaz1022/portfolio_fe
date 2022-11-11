@@ -15,7 +15,7 @@
   height: 100vh;
   flex-direction: row;
 
-  background-color: var(--beige-color);
+  background-color: var(--backgroundDark-color);
 
   padding: 6rem 2rem 0rem;
 
@@ -108,6 +108,16 @@
     width: 400px;
     margin-top: -3rem;
   }
+
+  .blur {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(60px);
+    margin: 0 -15rem -15rem 0;
+  }  
 
   @media screen and (max-width: 450px) {
     transform: scale(0.75);

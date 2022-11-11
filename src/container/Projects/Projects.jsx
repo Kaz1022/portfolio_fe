@@ -38,7 +38,7 @@ const Projects = () => {
 
   return (
     <section className='app__projects' id="projects">
-      <h2 className="head-text" >Projects</h2>
+      <h2 className="head-text" >PROJECTS</h2>
 
       <div className="app__project-filter">
         {['React', 'Javascript', 'Fullstack', 'All'].map((item, index) => (

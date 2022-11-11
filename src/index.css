@@ -3,6 +3,9 @@
 :root {
   --font-base: "Dosis", sans-serif;
 
+  --backgroundDark-color:#102030;
+  --backgroundLight-color: #6586711c;
+
   --primary-color: #edf2f8;
   --secondary-color: #FA9F42;
   --black-color: #030303;

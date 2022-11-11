@@ -46,7 +46,7 @@ const Footer = () => {
 
   return (
     <section className="app__footer" id="contact">
-      <h2 className="head-text">Contact</h2>
+      <h2 className="head-text">CONTACT</h2>
       <div className="contact__form-container">
         {!isFormSubmitted ? (
           <div className="app__footer-form">

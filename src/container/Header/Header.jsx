@@ -58,7 +58,7 @@ const Header = () => {
         <h1>A Mindful Web Developer...</h1>
         <p>...who loves being creative, working with people, trying new things and aquiring new skills. </p>
 
-        {/* blur divs */}
+        {/* blur div */}
         <div className="blur" style={{background: 'var(--white-color)'}}>
         </div>
       </div>
@@ -73,7 +73,10 @@ const Header = () => {
             src={images.heart} 
             alt="heart" 
             className="header-heart"
-          />          
+          />
+          {/* blur div */}
+          <div className="blur" style={{background: 'var(--white-color)'}}>
+        </div>          
       </div>
 
     </section>
