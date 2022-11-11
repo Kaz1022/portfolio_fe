@@ -11,6 +11,7 @@ const Footer = () => {
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const { username, email, message } = formData;
 
@@ -20,22 +21,27 @@ const Footer = () => {
   };
 
   const handleSubmit = () => {
-    setLoading(true);
+    if (username && email && message) {
+      setError("");
+      setLoading(true);
 
-    const contact = {
-      _type: "contact",
-      name: username,
-      email: email,
-      message: message,
-    };
+      const contact = {
+        _type: "contact",
+        name: username,
+        email: email,
+        message: message,
+      };
 
-    client
-      .create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-      })
-      .catch((err) => console.log(err));
+      client
+        .create(contact)
+        .then(() => {
+          setLoading(false);
+          setIsFormSubmitted(true);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setError("*Please fill out all fields!");
+    }
   };
 
   return (
@@ -55,6 +61,7 @@ const Footer = () => {
                 name="username"
                 value={username}
                 onChange={handleChangeInput}
+                required
               />
             </div>
             <div className="app__flex">
@@ -68,6 +75,7 @@ const Footer = () => {
                 name="email"
                 value={email}
                 onChange={handleChangeInput}
+                required
               />
             </div>
             <div className="app__flex">
@@ -80,19 +88,37 @@ const Footer = () => {
                 value={message}
                 name="message"
                 onChange={handleChangeInput}
+                required
               />
             </div>
             <div className="button-container">
-            <button type="button" className="p-text app__flex" onClick={handleSubmit}>
-              {!loading ? "Send Message" : "Sending..."}
-            </button>
+              {error && <p>{error}</p>}
+              <button
+                type="button"
+                className="p-text app__flex"
+                onClick={handleSubmit}
+              >
+                {!loading ? "Send Message" : "Sending..."}
+              </button>
             </div>
           </div>
         ) : (
-          <div>
-            <h3>Thank you for getting in touch!</h3>
+          <div className="contact__form-sent">
+            <h3 className="app__flex">Thank you for getting in touch!</h3>
           </div>
         )}
+      </div>
+      <div className="app__footer-copyright app__flex">
+        <p>
+          © Copyright 2022. Made by{" "}
+          <a
+            href="https://kazukobaynton.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kazuko Baynton
+          </a>
+        </p>
       </div>
     </section>
   );
