@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 
 import "./About.scss";
 
 const About = () => {
   return (
-    <section className="app__about app__flex">
+    <section className="app__about app__flex" id="about">
         <h2 className="head-text">ABOUT ME</h2>
         <div className="about__content">
           <div className="about__content-main">
