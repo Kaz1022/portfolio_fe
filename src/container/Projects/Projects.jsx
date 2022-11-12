@@ -105,7 +105,7 @@ const Projects = () => {
                   <a href={work.projectLink} target="_blank" rel="noreferrer">
                     <motion.div
                       whileInView={{ scale: [0, 1.5] }}
-                      whileHover={{ scale: [0, 0.9] }}
+                      whileHover={{ scale: [1, 0.9] }}
                       transition={{ duration: 0.25 }}
                       className="app__flex"
                     >
@@ -116,7 +116,7 @@ const Projects = () => {
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1.5] }}
-                    whileHover={{ scale: [0, 0.9] }}
+                    whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
