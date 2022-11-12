@@ -113,8 +113,6 @@ const Footer = () => {
           © Copyright 2022. Made by{" "}
           <a
             href="https://kazukobaynton.com"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Kazuko Baynton
           </a>
